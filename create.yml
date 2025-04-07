@@ -1,7 +1,13 @@
-- name: Copy new file to destination
-  ansible.builtin.copy:
-    src: data/semaphore/myconfig.conf
-    dest: /etc/myconfig.conf
-    owner: root
-    group: root
-    mode: '0644'
+---
+- name: Copy a config file to the remote host
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Copy new file to destination
+      ansible.builtin.copy:
+        src: files/myconfig.conf
+        dest: /etc/myconfig.conf
+        owner: root
+        group: root
+        mode: '0644'
