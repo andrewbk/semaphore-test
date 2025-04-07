@@ -1,0 +1,8 @@
+# ping.yml
+- name: Ping all servers in inventory
+  hosts: my_servers
+  gather_facts: no
+
+  tasks:
+    - name: Ping each server
+      ansible.builtin.ping:
