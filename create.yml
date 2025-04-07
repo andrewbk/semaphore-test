@@ -6,7 +6,7 @@
   tasks:
     - name: Copy new file to destination
       ansible.builtin.copy:
-        src: files/myconfig.conf
+        src: /data/semaphore/myconfig.conf
         dest: /etc/myconfig.conf
         owner: root
         group: root
