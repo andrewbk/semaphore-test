@@ -1,0 +1,7 @@
+- name: Copy new file to destination
+  ansible.builtin.copy:
+    src: data/semaphore/myconfig.conf
+    dest: /etc/myconfig.conf
+    owner: root
+    group: root
+    mode: '0644'
