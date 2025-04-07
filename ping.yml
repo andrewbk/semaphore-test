@@ -1,7 +1,7 @@
 # ping.yml
 - name: Ping all servers in inventory
   hosts: my_servers
-  gather_facts: no
+  gather_facts: yes
 
   tasks:
     - name: Ping each server
